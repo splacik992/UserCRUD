@@ -9,8 +9,6 @@ import java.util.List;
 public class UserDao {
 
 
-
-
     private static final String CREATE_USER_QUERY = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
 
     private static final String READ_USER_QUERY = "SELECT * FROM users where id = ?";
@@ -44,7 +42,6 @@ public class UserDao {
             e.printStackTrace();
             return null;
         }
-
     }
 
     public User read(int userId) {
@@ -97,7 +94,6 @@ public class UserDao {
     }
 
 
-
     public void delete(int userId) {
         try (Connection conn = DbUtil.getConnection()) {
             PreparedStatement statement = conn.prepareStatement(DELETE_USER_QUERY);
@@ -109,42 +105,8 @@ public class UserDao {
         }
     }
 
-//    public List<User> findAll(){
-//        List<List<String>> result = new ArrayList<>();
-//        List<User> list = new ArrayList<>();
-//        try (Connection conn = DbUtil.getConnection()) {
-//            PreparedStatement statement = conn.prepareStatement(FIND_ALL_USERS);
-//            ResultSet rs = statement.executeQuery();
-//            List<String> row = new ArrayList<>();
-//            while(rs.next()) {
-//
-//                int colnum = rs.getMetaData().getColumnCount();
-//                for (int i = 0; i < colnum; i++) {
-//                    String col = rs.getString(i+1);
-//                    row.add(col);
-//                }
-//                result.add(row);
-//            }
-//
-//            for (List<String> strings : result) {
-//                User user2 = new User();
-//                user2.setId(Integer.parseInt(strings.get(0)));
-//                user2.setEmail(strings.get(1));
-//                user2.setUserName(strings.get(2));
-//                user2.setPassword(strings.get(3));
-//                list.add(user2);
-//            }
-//
-//            return list;
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//            return null;
-//        }
-//    }
 
-
-
-    public List<User> findAll(){
+    public List<User> findAll() {
         List<List<String>> result = new ArrayList<>();
         List<User> list = new ArrayList<>();
         try (Connection conn = DbUtil.getConnection()) {
@@ -152,11 +114,11 @@ public class UserDao {
                     conn.prepareStatement(FIND_ALL_USERS);
             ResultSet rs = statement.executeQuery();
 
-            while(rs.next()) {
+            while (rs.next()) {
                 List<String> row = new ArrayList<>();
                 int colNum = rs.getMetaData().getColumnCount();
                 for (int i = 0; i < colNum; i++) {
-                    String col = rs.getString(i+1);
+                    String col = rs.getString(i + 1);
                     row.add(col);
                 }
                 result.add(row);
@@ -177,13 +139,4 @@ public class UserDao {
             return null;
         }
     }
-
-
-
-
-
 }
-
-
-
-
