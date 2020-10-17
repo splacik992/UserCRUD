@@ -8,7 +8,6 @@ import java.util.List;
 
 public class UserDao {
 
-
     private static final String CREATE_USER_QUERY = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
 
     private static final String READ_USER_QUERY = "SELECT * FROM users where id = ?";
@@ -22,7 +21,6 @@ public class UserDao {
     public String hashPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
-
 
     public User create(User user) {
         try (Connection conn = DbUtil.getConnection()) {
@@ -58,7 +56,6 @@ public class UserDao {
                 user.setUserName(resultSet.getString("username"));
                 user.setPassword(resultSet.getString("username"));
 
-
             }
             if (user.getId() == 0) {
 
@@ -73,7 +70,6 @@ public class UserDao {
         }
 
     }
-
 
     public void update(User user) {
         try (Connection conn = DbUtil.getConnection()) {
@@ -90,7 +86,6 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
 
