@@ -1,4 +1,4 @@
-package pl.users;
+package pl.utils;
 
 public class User {
     private int id;

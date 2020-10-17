@@ -78,11 +78,11 @@
 
                             <td>
 
-<%--                                <a href='<c:url value="/users/delete?id=${user.id}"/>'>Usuń</a>--%>
+                                <a href='<c:url value="/users/delete?id=${user.id}"/>'>Usuń</a>
 
-<%--                                <a href='<c:url value="/users/edit?id=${user.id}"/>'>Edit</a>--%>
+                                <a href='<c:url value="/users/edit?id=${user.id}"/>'>Edit</a>
 
-<%--                                <a href='<c:url value="/users/show?id=${user.id}"/>'>Pokaż</a>--%>
+                                <a href='<c:url value="/users/show?id=${user.id}"/>'>Pokaż</a>
 
                             </td>
 

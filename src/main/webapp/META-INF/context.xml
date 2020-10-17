@@ -14,7 +14,8 @@
 
               driverClassName="com.mysql.jdbc.Driver"
 
-              connectionProperties="useSSL=false;useUnicode=yes;characterEncoding=utf8;serverTimezone=UTC;allowPublicKeyRetrieval=true;useSSL=false"
+              connectionProperties="useSSL=false;useUnicode=yes;characterEncoding=utf8;
+              serverTimezone=UTC;allowPublicKeyRetrieval=true;useSSL=false"
 
               url="jdbc:mysql://localhost:3306/workshop2"
 

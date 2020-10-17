@@ -11,19 +11,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/users/list")
-public class UserList extends HttpServlet {
+@WebServlet("/users/delete")
+public class DeleteUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String id = request.getParameter("id");
         UserDao userDao = new UserDao();
-        List<User> userList = userDao.findAll();
-        request.setAttribute("users", userList);
+        User user = userDao.read(Integer.parseInt(id));
 
-        getServletContext().getRequestDispatcher("/users/list.jsp").forward(request,response);
-
+        request.setAttribute("delete",userDao.delete(user.getId()));
+        response.sendRedirect("/users/list");
     }
 }
+
+

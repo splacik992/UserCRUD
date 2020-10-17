@@ -45,9 +45,9 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="list.jsp">
+            <a class="nav-link" href="/users/list">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>UsersCRUD</span></a>
+                <span>Lista użytkowników</span></a>
         </li>
 
         <!-- Divider -->

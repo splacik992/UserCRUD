@@ -1,8 +1,6 @@
-package pl.users;
+package pl.utils;
 
 import org.mindrot.jbcrypt.BCrypt;
-import pl.users.DbUtil;
-import pl.users.User;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -96,7 +94,7 @@ public class UserDao {
     }
 
 
-    public void delete(int userId) {
+    public User delete(int userId) {
         try (Connection conn = DbUtil.getConnection()) {
             PreparedStatement statement = conn.prepareStatement(DELETE_USER_QUERY);
             statement.setInt(1, userId);
@@ -105,6 +103,7 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
 
