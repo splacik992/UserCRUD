@@ -15,6 +15,7 @@ import java.io.IOException;
 public class ShowUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        response.sendRedirect("/users/list");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,6 +24,7 @@ public class ShowUser extends HttpServlet {
         User user = userDao.read(Integer.parseInt(id));
 
         request.setAttribute("showUser", user);
+        ;
         getServletContext().getRequestDispatcher("/users/show.jsp").forward(request, response);
 
     }

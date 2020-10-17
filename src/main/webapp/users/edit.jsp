@@ -41,7 +41,7 @@
                         <div class="form-group">
                             <label for="userName"><b>Nazwa</b></label>
                             <input value="${user.userName}" name="name" type="text" class="form-control" id=userName
-                                   placeholder="Nazwa użytkownika">
+                                   placeholder="Nowa nazwa użytkownika">
                         </div>
 
                         <div class="form-group">
@@ -58,10 +58,13 @@
                         </div>
 
                         <div class="d-sm-flex align-items-center justify-content-center ">
-                            <label>
-                                <button type="submit" name="submit" class="btn btn-outline-primary">Akceptuj
-                                </button>
-                            </label>
+                            <form method="post">
+                                <label>
+
+                                    <button type="submit" name="submit" class="btn btn-outline-primary">Akceptuj
+                                    </button>
+                                </label>
+                            </form>
                         </div>
                     </form>
                 </div>
