@@ -58,13 +58,13 @@
                         </div>
 
                         <div class="d-sm-flex align-items-center justify-content-center ">
-                            <form method="post">
+
                                 <label>
 
                                     <button type="submit" name="submit" class="btn btn-outline-primary">Akceptuj
                                     </button>
                                 </label>
-                            </form>
+
                         </div>
                     </form>
                 </div>
