@@ -1,6 +1,8 @@
-package pl.utils;
+package pl.users;
 
 import org.mindrot.jbcrypt.BCrypt;
+import pl.users.DbUtil;
+import pl.users.User;
 
 import java.sql.*;
 import java.util.ArrayList;

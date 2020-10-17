@@ -1,4 +1,4 @@
-package pl.utils;
+package pl.users;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
