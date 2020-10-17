@@ -1,5 +1,8 @@
 package pl.users;
 
+import pl.users.User;
+import pl.users.UserDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
