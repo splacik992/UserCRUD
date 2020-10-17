@@ -32,6 +32,7 @@
 
 
         </div>
+
         <div class="card sidebar-light shadow m-5">
             <div class="card-header py-3">
                 <div class="card-body">
@@ -51,7 +52,8 @@
 
                         <div class="form-group">
                             <label for="password">Haslo</label>
-                            <input value="${user.password}" name="password" type="password" class="form-control" id=password
+                            <input value="${user.password}" name="password" type="password" class="form-control"
+                                   id=password
                                    placeholder="Nowe hasło">
                         </div>
 
