@@ -40,6 +40,7 @@
             <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
         </a>
 
+
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
@@ -48,17 +49,23 @@
             <a class="nav-link" href="/users/list">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Lista użytkowników</span></a>
+
+
         </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
 
         <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
 
+
+
+        <a href="<c:url value="/admin/logout"/>" class="d-none d-sm-inline-block btn btn-dark btn-primary shadow-sm">
+
+            <i class="fas fa-download fa-sm text-white-50"></i> Wyloguj </a>
     </ul>
+
+
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -75,4 +82,6 @@
                     <i class="fa fa-bars"></i>
                 </button>
             </nav>
+
+
             <!-- End of Topbar -->
