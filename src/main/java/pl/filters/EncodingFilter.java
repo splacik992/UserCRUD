@@ -1,11 +1,11 @@
-package pl.users;
+package pl.filters;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 @WebFilter("/*")
-public class Filter implements javax.servlet.Filter {
+public class EncodingFilter implements javax.servlet.Filter {
     public void destroy() {
     }
 
